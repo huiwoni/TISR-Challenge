@@ -5,25 +5,37 @@
 - einops
 
 ## Installation
-Install Pytorch, BasicSR, einops.
-
+- Install Pytorch, BasicSR, einops.
 ```
 python setup.py develop
 ```
 ## Data Preparation
-### DF2K
+### DF2K for Pre-training
 - Preparation of DF2K dataset can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md). save it in `./datasets`
-- 
-### Thermal Image
+Extract sub-images
+```
+python df2k_extract_subimages.py
+```
+Create a meta-info file
+```
+python df2k_generate_meta_info.py
+```
+### Thermal Image for Fine-tuning
 - Preparation of Thermal Image can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
-  
+```
+python thermal_extract_subimages.py
+```
+Create a meta-info file
+```
+python thermal_generate_meta_info.py
+```
 ## Quick[test]
 - Refer to `./options/test`
 - Preparation of test data can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
 - The pretrained models are available at
 [Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/.
 
-- Create SR images
+Create SR images
 ```
 python hat/test.py -opt options/test/HAT_SRx8_quick.yml
 ```
