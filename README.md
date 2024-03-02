@@ -14,7 +14,7 @@ python setup.py develop
 - The pretrained models are available at
 [Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing), Save it in ./experiments/pretrained/.
 
-- Create SR image
+- Create SR images
 ```
 python hat/test.py -opt options/test/HAT_SRx8_quick.yml
 ```
