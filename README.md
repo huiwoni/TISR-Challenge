@@ -5,12 +5,9 @@
 ### Installation
 Install Pytorch, BasicSR.
 
+```
 python setup.py develop
 ```
-
-## Test
-
-Without implementing the codes, [chaiNNer](https://github.com/chaiNNer-org/chaiNNer) is a nice tool to run our models.
 
 Otherwise, 
 - Refer to `./options/test` for the configuration file of the model to be tested, and prepare the testing data and pretrained model.  
