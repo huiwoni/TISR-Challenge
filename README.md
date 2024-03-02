@@ -1,4 +1,5 @@
 ## Environment
+- Python == 3.8.0
 - PyTorch == 1.11.0
 - BasicSR == 1.3.4.9
 - einops
