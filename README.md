@@ -2,7 +2,7 @@
 - Python == 3.8.0
 - [PyTorch == 1.11.0](https://pytorch.kr/get-started/previous-versions/)
 - BasicSR == 1.3.4.9
-- einops
+- eninops
 
 ## Installation
 - Install Pytorch, BasicSR and Einops first. Then,
