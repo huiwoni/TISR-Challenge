@@ -9,28 +9,33 @@ Install Pytorch, BasicSR.
 ```
 python setup.py develop
 ```
-
-- Refer to `./options/test` for the configuration file of the model to be tested, and prepare the testing data and pretrained model.  
+## Quick[test]
+- Refer to `./options/test`
 - The pretrained models are available at
-[Google Drive](https://drive.google.com/drive/folders/1HpmReFfoUqUbnAOQ7rvOeNU3uf_m69w0?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/1u2r4Lc2_EEeQqra2-w85Xg) (access code: qyrl).  
-- Then run the following codes (taking `HAT_SRx4_ImageNet-pretrain.pth` as an example):
+[Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing)
 
-## Quick
 - Create SR image
 ```
 python hat/test.py -opt options/test/HAT_SRx8_quick.yml
 ```
 The testing results will be saved in the `./results` folder.  
 
-**Note that the tile mode is also provided for limited GPU memory when testing. You can modify the specific settings of the tile mode in your custom testing option by referring to `./options/test/HAT_tile_example.yml`.**
-
-## How To Train
-- Refer to `./options/train` for the configuration file of the model to train.
-- Preparation of training data can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md). ImageNet dataset can be downloaded at the [official website](https://image-net.org/challenges/LSVRC/2012/2012-downloads.php).
-- The training command is like
+# Pretraining
+- Refer to `./options/train`
+- Preparation of training data can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md).
+- The pretraining command is like
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 hat/train.py -opt options/train/train_HAT_SRx2_from_scratch.yml --launcher pytorch
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=1234 hat/train.py -opt options/train/train_HAT_thermalSRx8_pre.yml --launcher pytorch
 ```
 
-The training logs and weights will be saved in the `./experiments` folder.
+# Fine-tuning
+- Refer to `./options/train`
+- Preparation of training data can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
+- The pretraining command is like
+```
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=1234 hat/train.py -opt options/train/train_HAT_thermalSRx8_48_cutblur_fineturn.yml --launcher pytorch
+```
+
+
+# The training logs and weights will be saved in the `./experiments` folder.
 
