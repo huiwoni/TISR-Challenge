@@ -40,3 +40,5 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 -
 ```
 -The training logs and weights will be saved in the `./experiments` folder.
 
+# Acknowledgment
+Our codes borrowed from [XPixelGroup](https://github.com/XPixelGroup/HAT). 
