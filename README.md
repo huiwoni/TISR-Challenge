@@ -22,6 +22,7 @@ python df2k_generate_meta_info.py
 ```
 ### Thermal Image for Fine-tuning
 - Preparation of Thermal Image can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
+Extract sub-images
 ```
 python thermal_extract_subimages.py
 ```
@@ -43,7 +44,7 @@ The testing results will be saved in the `./results` folder.
 
 ## Pre-training
 - Refer to `./options/train`
-- The pretraining command is like
+Pretraining command
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=1234 hat/train.py -opt options/train/train_HAT_thermalSRx8_pre.yml --launcher pytorch
 ```
@@ -53,7 +54,7 @@ The training logs and weights will be saved in the `./experiments` folder.
 - Refer to `./options/train`
 - The model pre-trained on the DF2K dataset is available at
 [Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/.
-- The Fine-tuning command is like
+Fine-tuning command
 ```
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=1234 hat/train.py -opt options/train/train_HAT_thermalSRx8_48_cutblur_fineturn.yml --launcher pytorch
 ```
