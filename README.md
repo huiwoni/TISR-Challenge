@@ -3,7 +3,7 @@
 - BasicSR == 1.3.4.9
 - einops
 
-### Installation
+## Installation
 Install Pytorch, BasicSR, einops.
 
 ```
@@ -20,7 +20,7 @@ python hat/test.py -opt options/test/HAT_SRx8_quick.yml
 ```
 The testing results will be saved in the `./results` folder.
 
-# Pre-training
+## Pre-training
 - Refer to `./options/train`
 - Preparation of training data can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md).
 - The pretraining command is like
@@ -29,7 +29,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 ```
 -The training logs and weights will be saved in the `./experiments` folder.
 
-# Fine-tuning
+## Fine-tuning
 - Refer to `./options/train`
 - Preparation of training data can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
 - The model pre-trained on the DF2K dataset is available at
@@ -40,5 +40,5 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 -
 ```
 -The training logs and weights will be saved in the `./experiments` folder.
 
-# Acknowledgment
+## Acknowledgment
 Our codes borrowed from [XPixelGroup](https://github.com/XPixelGroup/HAT). 
