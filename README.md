@@ -22,6 +22,7 @@ python df2k_generate_meta_info.py
 ```
 ### Thermal Image for Fine-tuning
 - Preparation of Thermal Image can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
+
 Extract sub-images
 ```
 python thermal_extract_subimages.py
