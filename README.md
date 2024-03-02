@@ -12,6 +12,7 @@ python setup.py develop
 ```
 ## Quick[test]
 - Refer to `./options/test`
+- Preparation of test data can refer to [this page](https://codalab.lisn.upsaclay.fr/competitions/17013#learn_the_details).
 - The pretrained models are available at
 [Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/.
 
