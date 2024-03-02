@@ -12,6 +12,7 @@ python setup.py develop
 ## Data Preparation
 ### DF2K for Pre-training
 - Preparation of DF2K dataset can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md). save it in `./datasets`
+
 Extract sub-images
 ```
 python df2k_extract_subimages.py
