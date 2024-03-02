@@ -20,7 +20,7 @@ python hat/test.py -opt options/test/HAT_SRx8_quick.yml
 ```
 The testing results will be saved in the `./results` folder.
 
-# Pretraining
+# Pre-training
 - Refer to `./options/train`
 - Preparation of training data can refer to [this page](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md).
 - The pretraining command is like
