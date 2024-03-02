@@ -4,7 +4,7 @@
 - einops
 
 ### Installation
-Install Pytorch, BasicSR.
+Install Pytorch, BasicSR, einops.
 
 ```
 python setup.py develop
