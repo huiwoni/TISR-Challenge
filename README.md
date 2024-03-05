@@ -35,7 +35,7 @@ python thermal_generate_meta_info.py
 ## Quick[test]
 - Refer to `./options/test`
 - The pretrained models are available at
-[Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/.
+[Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/. (best performance at 14,000 iterations)
 
 Create SR images
 ```
@@ -54,7 +54,7 @@ The training logs and weights will be saved in the `./experiments` folder.
 ## Fine-tuning
 - Refer to `./options/train`
 - The model pre-trained on the DF2K dataset is available at
-[Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/.
+[Google Drive](https://drive.google.com/drive/folders/1UFVLyONwlqJpWE6hEw7Kqqxw2GdBo43m?usp=sharing). Save it in ./experiments/pretrained/. (We conducted training for 191,000 iterations.)
 Fine-tuning command
 ```
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=1234 hat/train.py -opt options/train/train_HAT_thermalSRx8_48_cutblur_fineturn.yml --launcher pytorch
