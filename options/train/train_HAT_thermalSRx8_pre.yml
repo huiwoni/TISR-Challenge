@@ -1,6 +1,6 @@
 # general settings
 name: train_HAT_thermalSRx8_pretrain
-model_type: aug_HATModel
+model_type: not_aug_HATModel
 scale: 8
 num_gpu: 4
 manual_seed: 0
