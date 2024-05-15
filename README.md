@@ -1,6 +1,6 @@
-# [CVPR Vizwiz Challenge 2024]
+# [PBVS @ CVPR 2024 Thermal Images Super-resolution challenge- Track 1]
 
-Our method achieved 4th place in PSNR and 3rd place in SSIM in the 5th Thermal Image Super-Resolution Challenge (TISR), hosted by CVPR 2024. [link](https://codalab.lisn.upsaclay.fr/competitions/17013#results)
+Our method achieved 4th place in PSNR and 3rd place in SSIM in the PBVS 2024 Thermal Image Super-Resolution Challenge(TISR)-Track1. [link](https://codalab.lisn.upsaclay.fr/competitions/17013#results)
 
 ## Environment
 - Python == 3.8.0
