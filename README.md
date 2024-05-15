@@ -1,3 +1,7 @@
+# [CVPR Vizwiz Challenge 2024]
+
+Our method achieved 4th place in PSNR and 3rd place in SSIM in the 5th Thermal Image Super-Resolution Challenge (TISR), hosted by CVPR 2024. [link](https://codalab.lisn.upsaclay.fr/competitions/17013#results)
+
 ## Environment
 - Python == 3.8.0
 - [PyTorch == 1.11.0](https://pytorch.kr/get-started/previous-versions/)
